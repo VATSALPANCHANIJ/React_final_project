@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+.footer4 {
+    font-family: 'Poppins', sans-serif;
+    border-top: 1px solid #e2e2e2;
+}
+.home4-footer {
+    display: flex;
+}
+.f-logo {
+    width: 25%;
+}
+.f-logo ul.footer-ul {
+    flex-direction: column;
+}
+.f-logo ul.footer-ul li.footer-logo p {
+    color: #999;
+    margin-top: 14px;
+    margin-bottom: 21px;
+}
+/* footer bottom css */
+.footer-bottom {
+    width: 55%;
+}
+.footer-link {
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin-left: -15px;
+}
+.f-link {
+    margin-left: 15px;
+}
+.f-link .h-footer {
+    color: #000;
+    font-size: 16px !important;
+    font-weight: 600;
+    line-height: 1;
+}
+.f-link a.h-footer {
+    display: none;
+}
+.f-link .collapse:not(.show) {
+    display: block;
+    margin-top: 22px;
+}
+.f-link ul.f-link-ul li.f-link-ul-li {
+    margin-top: 9px;
+}
+.f-link ul.f-link-ul li.f-link-ul-li a {
+    color: #999;
+}
+.f-link ul.f-link-ul li.f-link-ul-li a:hover {
+    color: #73841b;
+}
+.section-tb-padding {
+    padding-bottom: 80px;
+    padding-top: 50px;
+
+}

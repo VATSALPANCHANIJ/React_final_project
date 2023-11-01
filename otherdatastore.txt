@@ -1,0 +1,34 @@
+    {
+      "id": 1,
+      "image_1": "image/home-9/product/pro-1.jpg",
+      "image_2": "image/home-9/product/pro-01.jpg",
+      "name": "Fresh litchi 100% organic",
+      "label": "New",
+      "price": "$117.00 USD",
+      "discount": null,
+      "old_price": null,
+      "rating": [
+        "e-star",
+        "e-star",
+        "e-star",
+        "e-star",
+        "e-star"
+      ]
+    },
+    {
+      "id": 2,
+      "image_1": "image/home-9/product/pro-2.jpg",
+      "image_2": "image/home-9/product/pro-02.jpg",
+      "name": "Fresh dryed almond (50gm)",
+      "label": null,
+      "price": "$580.00 USD",
+      "discount": "-10%",
+      "old_price": "$590.00 USD",
+      "rating": [
+        "e-star",
+        "e-star",
+        "e-star",
+        "e-star",
+        "e-star"
+      ]
+    },

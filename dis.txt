@@ -1,0 +1,17 @@
+// function zoom(e) {
+// var zoomer = e.currentTarget;
+// var offsetX = e.offsetX ? e.offsetX : e.touches[0].pageX;
+// var offsetY = e.offsetY ? e.offsetY : e.touches[0].pageY;
+// var x = (offsetX / zoomer.offsetWidth) * 100;
+// var y = (offsetY / zoomer.offsetHeight) * 100;
+// zoomer.style.backgroundPosition = x + '% ' + y + '%';
+// }
+// const imageUrl =
+'https://images.unsplash.com/photo-1575936123452-b67c3203c357?auto=format&fit=crop&q=80&w=1000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8aW1hZ2V8ZW58MHx8MHx8fDA%3D'
+
+
+{/* <div id="idMegnifyer">
+    <ReactImageMagnify {...{ smallImage: { alt: 'Wristwatch by Ted Baker London' , isFluidWidth: true, src: imageUrl },
+        largeImage: { src: imageUrl, width: 750, height: 500, } }} />
+
+</div> */}
