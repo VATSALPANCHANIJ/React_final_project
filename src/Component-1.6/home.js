@@ -49,7 +49,6 @@ const Home = () => {
         axios.get(`http://localhost:3030/Featured_products`)
             .then((res) => {
                 setfeatured_products(res.data);
-
             })
             .catch((err) => {
                 console.log(err);
@@ -105,10 +104,10 @@ const Home = () => {
     }, []);
 
     return (
-        <div className="sweet-loading">
-            
+        <div className="sweet-loading" style={{ backgroundColor: loading ? '#F5AB1E' : '#FFFFFF', minHeight: '100vh' }}>
+
             {loading ? (
-                <Loader/>
+                <Loader />
             ) : (
                 <>{/* Slider part */}
                     <section className="home-slider-6">
@@ -191,18 +190,18 @@ const Home = () => {
                                             <div className="items col-12 py-1" key={val.id}>
                                                 <div className="tred-pro">
                                                     <div className="tr-pro-img">
-                                                        <NavLink to='/Productshow'>
+                                                        <Link to={'/Product/${`Featured_products`}/${val.id}'}>
                                                             <img className="img-fluid" src={val.Image_1} alt="pro-img1" />
                                                             <img className="img-fluid additional-image" src={val.img_2} alt="additional image" />
-                                                        </NavLink>
+                                                        </Link>
                                                     </div>
                                                     <div className="Pro-lable">
                                                         <span className="p-text">New</span>
                                                     </div>
                                                     <div className="pro-icn">
                                                         <div className="row ">
-                                                            <a href="wishlist.html" className="icn icns"><i className="fa fa-heart" /></a>
-                                                            <a href="cart.html" className="icn"><i className="fa fa-shopping-bag" /></a>
+                                                            <Link to={``} className="icn icns"><i className="fa fa-heart" /></Link>
+                                                            <Link to={`/Cart`} className="icn"><i className="fa fa-shopping-bag" /></Link>
                                                             <Link to={`/Product/${`Featured_products`}/${val.id}`} href="javascript:void(0)" className="icn"><i className="fa fa-eye" /></Link>
                                                         </div>
                                                     </div>
@@ -333,8 +332,8 @@ const Home = () => {
                                                                     )}
                                                                     <div className="pro-icn">
                                                                         <div className="row ">
-                                                                            <a href="wishlist.html" className="icn icns"><i className="fa fa-heart" /></a>
-                                                                            <a href="cart.html" className="icn"><i className="fa fa-shopping-bag" /></a>
+                                                                            <Link to={``} className="icn icns"><i className="fa fa-heart" /></Link>
+                                                                            <Link to={`/Cart`} className="icn"><i className="fa fa-shopping-bag" /></Link>
                                                                             <Link to={`/Product/${`Bread_Products_section`}/${val.id}`} className="icn"><i className="fa fa-eye" /></Link>
                                                                         </div>
                                                                     </div>
@@ -421,8 +420,8 @@ const Home = () => {
                                                                                         </div>
                                                                                         <div className="pro-icn">
                                                                                             <div className="row ">
-                                                                                                <a href="wishlist.html" className="icn icns"><i className="fa fa-heart" /></a>
-                                                                                                <a href="cart.html" className="icn"><i className="fa fa-shopping-bag" /></a>
+                                                                                                <Link to={``} className="icn icns"><i className="fa fa-heart" /></Link>
+                                                                                                <Link to={`/Cart`} className="icn"><i className="fa fa-shopping-bag" /></Link>
                                                                                                 <Link to={`/Product/${`Our_Furits_section`}/${val.id}`} className="icn"><i className="fa fa-eye" /></Link>
                                                                                             </div>
                                                                                         </div>
@@ -685,8 +684,8 @@ const Home = () => {
                                                                         </div>
                                                                         <div className="pro-icn">
                                                                             <div className="row ">
-                                                                                <a href="wishlist.html" className="icn icns"><i className="fa fa-heart" /></a>
-                                                                                <a href="cart.html" className="icn"><i className="fa fa-shopping-bag" /></a>
+                                                                                <Link to={``} className="icn icns"><i className="fa fa-heart" /></Link>
+                                                                                <Link to={`/Cart`} className="icn"><i className="fa fa-shopping-bag" /></Link>
                                                                                 <Link to={`/Product/${`Juice_bottle`}/${val.id}`} className="icn"><i className="fa fa-eye" /></Link>
                                                                             </div>
                                                                         </div>
@@ -815,50 +814,6 @@ const Home = () => {
                             </div>
                         </div>
                     </section>
-                    {/* <div>
-                            <a href="javascript:void(0)" className="w-c-q-icn" onClick={togglePopup}><i className="icon-eye eye" /></a>
-
-                            {showPopup && (
-                                <>
-                                    <main className='main'>
-                                        <div className="popup">
-                                            <div className='box'>
-                                                <div className='row'>
-                                                    <div className='img col-5'>
-                                                        <img src="image/home-16/product-img/pro-1.2.jpg" alt="" />
-                                                    </div>
-                                                    <div className="popup-content col-7 text-start">
-                                                        <h2>Product Name</h2>
-                                                        <p className="product_detail_desc py-2">Morbi eget congue lectus. Donec eleifend ultricies <br /> urna
-                                                            et euismod. Sed  consectetur tellus  eget odio aliquet, <br /> vel vestibulum tellus  sollicitudin.
-                                                            Morbi maximus metus eu eros tincidunt,<br /> vitae mollis ante imperdiet. Nulla imperdiet at
-                                                            mauris ut posuere. </p>
-                                                        <div className="rating_review_cont d-flex d-flex align-items-center">
-                                                            <ul className="rating_star ul_li">
-                                                                <li className="active"><i class="bi bi-star-fill"></i></li>
-                                                                <li className="active"><i class="bi bi-star-fill"></i></li>
-                                                                <li className="active"><i class="bi bi-star-fill"></i></li>
-                                                                <li className="active"><i class="bi bi-star-fill"></i></li>
-                                                                <li className="active"><i class="bi bi-star-half"></i></li>
-                                                            </ul>
-                                                        </div>
-                                                        <button onClick={togglePopup} className='close'><i className="fa fa-times-circle" aria-hidden="true"></i></button>
-                                                    </div>
-                                                    <div className="product10_quantity_btn_wrap d-flex align-items-center justify-content-center">
-
-                                                        <a href="#"><button type="button" className="btn custom_btn rounded-pill ms-3 px-5 py-3 text-white">Order Now <i className="fas fa-long-arrow-alt-right" /></button></a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </main>
-
-
-                                </>
-                            )}
-
-
-                        </div> */}
                 </>
             )}
         </div>

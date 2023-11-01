@@ -1345,7 +1345,7 @@ button.navbar-toggler span.line::after{
     display: none;
 }
 .pro-icn a:hover {
-    background-color:#f5ab1e !important;
+    background-color: #f5ab1e !important;
     color: #fff;
     -webkit-transition: all 0.3s ease-in-out 0s;
     -o-transition: all 0.3s ease-in-out 0s;

@@ -13,7 +13,6 @@ const Login = () => {
         try {
             let users_add = await axios.get(`http://localhost:3030/User_Resigeters_data?email=${email}&password=${password}`);
             if (users_add.data.length === 0) {
-                console.log("done");
                 toast.error('Your Account is not found our database', {
                     position: "top-right",
                     autoClose: 2000,
@@ -27,14 +26,17 @@ const Login = () => {
                         width: '400px',
                     },
 
+
                 });
                 navigate('/Login');
+                setEmail("");
+                setPassword("");
                 return false;
             }
             localStorage.setItem('checkUserLogin', JSON.stringify(users_add.data[0]));
             setEmail("");
             setPassword("");
-            navigate('/');
+            navigate('/Cart');
         } catch (error) {
             console.log(error);
             return false;

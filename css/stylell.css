@@ -12,10 +12,7 @@
     background-color: white !important;
     color: black !important;
     transition: all 0.9s !important;
-}
-.pro-icn  a{
-    margin: 10px 5px !important;
-
+    margin: 10px 10px !important;
 }
 .icns a:hover {
     color: rgb(255, 191, 0) !important;
@@ -53,7 +50,11 @@
     text-decoration: none !important;
     border-color: #f5ab1e !important;
 }
-.btn-style10:hover{
-    background-color:transparent !important;
-    color: #f5ab1e !important
+.btn-style10:hover {
+    background-color: transparent !important;
+    color: #f5ab1e !important;
+}
+.pro-icn a:hover {
+    background-color: #f5ab1e !important;
+    color: #fff !important;
 }

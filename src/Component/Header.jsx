@@ -165,8 +165,10 @@ const Header = () => {
                                                         <div className="shopping-cart">
                                                             <a href="javascript:void(0)" className="cart-count">
                                                                 <span className="cart-icon-wrap">
-                                                                    <span className="cart-icon"><i className="icon-handbag" /></span>
-                                                                    <span id="cart-total" className="bigcounter">0</span>
+                                                                    <Link to='/Cart'>
+                                                                        <span className="cart-icon"><i className="icon-handbag" /></span>
+                                                                        <span id="cart-total" className="bigcounter">0</span>
+                                                                    </Link>
                                                                 </span>
                                                             </a>
                                                         </div>
