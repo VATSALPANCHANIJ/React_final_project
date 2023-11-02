@@ -1,4 +1,5 @@
 const Cart = () => {
+    
     return (
         <>
             <section className="cart-page section-tb-padding">

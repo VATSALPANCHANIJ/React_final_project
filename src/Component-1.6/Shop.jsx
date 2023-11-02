@@ -14,6 +14,7 @@ const Shop = () => {
         try {
             const res = await axios.get("http://localhost:3030/AllProduct_show_shop_page")
             setAllProducts(res.data);
+            console.log(res.data);
 
         } catch (error) {
             console.log(error);
@@ -35,7 +36,6 @@ const Shop = () => {
         console.log(catogerydata);
         if (catogerydata === "all") {
             Fetch_AllProducts();
-            console.log(allProducts);
         } else {
             axios.get(`http://localhost:3030/AllProduct_show_shop_page?catogery=${catogerydata}`).then((response) => {
                 setAllProducts(response.data);
@@ -71,12 +71,12 @@ const Shop = () => {
 
     useEffect(() => {
         Fetch_AllProducts();
-        categoryFilter();
+        // categoryFilter();
         allcatogory()
         // Simulate an asynchronous action (e.g., fetching data from an API)
         setTimeout(() => {
             setLoading(false);
-        }, 2000);
+        }, 1000);
     }, []);
 
     return (
@@ -91,8 +91,8 @@ const Shop = () => {
                             <div className="row" >
                                 <div className="col-lg-3 col-md-4 col-12 ">
                                     <div className="all-filter">
-                                        <div className="categories-page-filter " >
-                                            <h4 class="filter-title">Categories</h4>
+                                        <div className="categories-page-filter mt-5 text-center" style={{position :'fixed'}} >
+                                            <h3 class="filter-title">Categories</h3>
                                             <a href="#category-filter" data-bs-toggle="collapse" className="filter-link"><span>Categories </span><i className="fa fa-angle-down" /></a>
                                             <ul className="all-option collapse" id="category-filter">
                                                 {category.map((val) => (
@@ -140,7 +140,7 @@ const Shop = () => {
                                                                         <div className="row ">
                                                                             <Link to={``} className="icn icns"><i className="fa fa-heart" /></Link>
                                                                             <Link to={`/Cart`} className="icn"><i className="fa fa-shopping-bag" /></Link>
-                                                                            <Link to={`/Product/${`AllProduct_show_shop_page`}//${val.id}`} href="javascript:void(0)" className="icn"><i className="fa fa-eye" /></Link>
+                                                                            <Link to={`/Product/${`AllProduct_show_shop_page`}/${val.id}`} href="javascript:void(0)" className="icn"><i className="fa fa-eye" /></Link>
                                                                         </div>
                                                                     </div>
                                                                 </div>
