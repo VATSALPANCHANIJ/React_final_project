@@ -470,323 +470,351 @@
     }
   ],
   "AllProduct_show_shop_page": [
-        {
-          "id": 1,
-          "Image_1": "/image/home-9/product/pro-3.jpg",
-          "Image_2": "image/home-9/product/pro-03.jpg",
-          "Product_Name": "Fresh Lamon",
-          "Price": "$130.00 USD",
-          "new": "new",
-          "Dis_count": "-20%",
-          "catogery": "Furits",
-          "old_price": "$150.00 USD",
-          "rating": [
-            "c-star",
-            "c-star",
-            "c-star",
-            "o",
-            "o"
-          ]
-        },
-        {
-          "id": 2,
-          "Image_1": "/image/home-9/product/pro-4.jpg",
-          "Image_2": "image/home-9/product/pro-04.jpg",
-          "Product_Name": "Fresh Pineapple 100% organic",
-          "catogery": "Furits",
-          "Price": "$117.00 USD",
-          "Dis_count": "6%",
-          "old_price": null,
-          "rating": [
-            "c-star",
-            "c-star",
-            "c-star",
-            "e-star",
-            "o"
-          ]
-        },
-        {
-          "id": 3,
-          "Image_1": "/image/home-9/product/pro-5.jpg",
-          "Image_2": "image/home-9/product/pro-05.jpg",
-          "Product_Name": "Fresh Banana",
-          "Dis_count": "-20%",
-          "Price": "$110.00 USD",
-          "catogery": "Furits",
-          "Old_Price": "$160.00 USD",
-          "rating": [
-            "e-star",
-            "e-star",
-            "e-star",
-            "e-star",
-            "e-star"
-          ]
-        },
-        {
-          "id": 4,
-          "Image_1": "/image/home-9/product/pro-6.jpg",
-          "Image_2": "image/home-9/product/pro-06.jpg",
-          "Product_Name": "Organic Strawberry",
-          "catogery": "Furits",
-          "Dis_count": "-15%",
-          "Price": "$120.00 USD",
-          "Old_Price": "$140.00 USD",
-          "rating": [
-            "c-star",
-            "c-star",
-            "c-star",
-            "o",
-            "o"
-          ]
-        },
-        {
-          "id": 5,
-          "Image_1": "/image/home-9/product/pro-7.jpg",
-          "Image_2": "image/home-9/product/pro-07.jpg",
-          "Product_Name": "Pomegranate",
-          "catogery": "Furits",
-          "Dis_count": "-10%",
-          "Price": "$90.00 USD",
-          "Old_Price": "$100.00 USD",
-          "rating": [
-            "c-star",
-            "c-star",
-            "c-star",
-            "e-star",
-            "o"
-          ]
-        },
-        {
-          "id": 6,
-          "Image_1": "/image/home-9/product/pro-10.jpg",
-          "Image_2": "image/home-9/product/pro-010.jpg",
-          "Product_Name": "Mongo",
-          "catogery": "Furits",
-          "Dis_count": "-9%",
-          "Price": "$230.00 USD",
-          "Old_Price": "",
-          "rating": [
-            "c-star",
-            "c-star",
-            "c-star",
-            "e-star",
-            "o"
-          ]
-        },
-        {
-          "id": 7,
-          "Image_1": "/image/home-9/product/pro-11.jpg",
-          "Image_2": "image/home-9/product/pro-011.jpg",
-          "Product_Name": "Fresh Apple 100% organic",
-          "Dis_count": "2%",
-          "Price": "$117.00 USD",
-          "catogery": "Furits",
-          "Old_Price": "",
-          "rating": [
-            "c-star",
-            "c-star",
-            "c-star",
-            "o",
-            "o"
-          ]
-        },
-        {
-          "id": 8,
-          "Image_1": "/image/home-9/product/pro-12.jpg",
-          "Image_2": "image/home-9/product/pro-012.jpg",
-          "Product_Name": "Fresh Coconut (150gm)",
-          "Dis_count": "-10%",
-          "Price": "$80.00 USD",
-          "catogery": "Furits",
-          "Old_Price": "$90.00 USD",
-          "rating": [
-            "e-star",
-            "e-star",
-            "e-star",
-            "e-star",
-            "e-star"
-          ]
-        },
-        {
-          "id": 11,
-          "Image_1": "/image/home-14/pro-1.jpg",
-          "Image_2": "image/home-14/pro-01.jpg",
-          "Dis_count": "-10%",
-          "Product_Name": "Fresh Britannia",
-          "Price": "$120.00 USD",
-          "Old_Price": "$155.00 USD",
-          "catogery": "Bread"
-        },
-        {
-          "id": 12,
-          "Image_1": "/image/home-14/pro-2.jpg",
-          "Image_2": "image/home-14/pro-02.jpg",
-          "Dis_count": "-15%",
-          "Product_Name": "Organic Harvest",
-          "Price": "$110.00 USD",
-          "Old_Price": "$130.00 USD",
-          "catogery": "Bread"
-        },
-        {
-          "id": 13,
-          "Image_1": "/image/home-14/pro-3.jpg",
-          "Image_2": "image/home-14/pro-03.jpg",
-          "Dis_count": "-20%",
-          "Product_Name": " Brioche Bread",
-          "Price": "$90.00 USD",
-          "Old_Price": "$112.00 USD",
-          "catogery": "Bread"
-        },
-        {
-          "id": 14,
-          "Image_1": "/image/home-14/pro-4.jpg",
-          "Image_2": "image/home-14/pro-04.jpg",
-          "Dis_count": "-12%",
-          "Product_Name": "Ciabatta  Bread",
-          "Price": "$85.00 USD",
-          "Old_Price": "$97.00 USD",
-          "catogery": "Bread"
-        },
-       
-        {
-          "id": 21,
-          "Image_1": "/image/home-16/product-img/pro-1.2.jpg",
-          "Image_2": "image/home-16/product-img/pro-1.1.jpg",
-          "Dis_count": "-10%",
-          "Product_Name": "Coconet juicy",
-          "Price": "€63.00",
-          "Old_Price": "€78.00",
-          "catogery": "juice"
-        },
-        {
-          "id": 22,
-          "Image_1": "/image/home-16/product-img/pro-2.2.jpg",
-          "Image_2": "image/home-16/product-img/pro-2.1.jpg",
-          "Dis_count": "-6%",
-          "Product_Name": "Orange juicy",
-          "Price": "€82.00",
-          "catogery": "juice"
-        },
-        {
-          "id": 23,
-          "Image_1": "/image/home-16/product-img/pro-3.2.jpg",
-          "Image_2": "image/home-16/product-img/pro-3.1.jpg",
-          "Dis_count": "-8%",
-          "Product_Name": "Kiwi juicy",
-          "Price": "€60.00",
-          "Old_Price": "€85.00",
-          "catogery": "juice"
-        },
-        {
-          "id": 24,
-          "Image_1": "/image/home-16/product-img/pro-4.2.jpg",
-          "Image_2": "image/home-16/product-img/pro-4.1.jpg",
-          "Dis_count": "-1%",
-          "Product_Name": "lamon juicy",
-          "Price": "€33.00",
-          "Old_Price": "€45.00",
-          "catogery": "juice"
-        },
-        {
-          "id": 25,
-          "Image_1": "/image/home-16/product-img/pro-5.2.jpg",
-          "Image_2": "image/home-16/product-img/pro-5.1.jpg",
-          "Dis_count": "-5%",
-          "Product_Name": "strawberry juicy",
-          "Price": "€45.00",
-          "Old_Price": "€60.00",
-          "catogery": "juice"
-        },
-        {
-          "id": 31,
-          "Image_1": "/image/pro/pro-img-1.jpg",
-          "Image_2": "image/pro/pro-img-01.jpg",
-          "Product_Name": "Fresh organic Muskmelon (500gm)",
-          "Price": "$130.00 USD"
-        },
-        {
-          "id": 32,
-          "Image_1": "/image/pro/pro-img-2.jpg",
-          "Image_2": "image/pro/pro-img-02.jpg",
-          "Product_Name": "Fresh Brinjal  ",
-          "Price": "$160.00 USD"
-        },
-        {
-          "id": 33,
-          "Image_1": "/image/pro/pro-img-3.jpg",
-          "Image_2": "image/pro/pro-img-03.jpg",
-          "Product_Name": "Fresh apple",
-          "Price": "$110.00 USD",
-          "Old_Price": "$115.00 USD"
-        },
-        {
-          "id": 34,
-          "Image_1": "/image/pro/pro-img-4.jpg",
-          "Image_2": "image/pro/pro-img-04.jpg",
-          "Product_Name": "Fresh organic fruit (50gm)",
-          "Price": "$170.00 USD"
-        },
-        {
-          "id": 35,
-          "Image_1": "/image/pro/pro-img-5.jpg",
-          "Image_2": "image/pro/pro-img-05.jpg",
-          "Product_Name": "Vegetable tomato fresh",
-          "Price": "$140.00 USD",
-          "Old_Price": "$155.00 USD"
-        },
-        {
-          "id": 36,
-          "Image_1": "/image/pro/pro-img-6.jpg",
-          "Image_2": "image/pro/pro-img-06.jpg",
-          "Product_Name": "Natural grassbean",
-          "Price": "$139.00 USD",
-          "Old_Price": "$160.00 USD"
-        },
-        {
-          "id": 37,
-          "Image_1": "/image/pro/pro-img-7.jpg",
-          "Image_2": "image/pro/pro-img-07.jpg",
-          "Product_Name": "Fresh dryed almod (50gm)",
-          "Price": "$539.00 USD",
-          "Old_Price": "$560.00 USD"
-        },
-        {
-          "id": 38,
-          "Image_1": "/image/pro/pro-img-8.jpg",
-          "Image_2": "image/pro/pro-img-08.jpg",
-          "Product_Name": "Orange juice (5ltr)",
-          "Price": "$60.00 USD"
-        },
-        {
-          "id": 39,
-          "Image_1": "/image/pro/pro-img-9.jpg",
-          "Image_2": "image/pro/pro-img-09.jpg",
-          "Product_Name": "Organic coconet (5ltr) juice",
-          "Price": "$110.00 USD",
-          "Old_Price": "$115.00 USD"
-        },
-        {
-          "id": 40,
-          "Image_1": "/image/pro/pro-img-15.jpg",
-          "Image_2": "image/pro/pro-img-015.jpg",
-          "Product_Name": "carrots ",
-          "Price": "$170.00 USD"
-        },
-        {
-          "id": 41,
-          "Image_1": "/image/pro/pro-img-11.jpg",
-          "Image_2": "image/pro/pro-img-011.jpg",
-          "Product_Name": "Sp.red fresh guava",
-          "Price": "$140.00 USD",
-          "Old_Price": "$15.00 USD"
-        },
-        {
-          "id": 42,
-          "Image_1": "/image/pro/pro-img-12.jpg",
-          "Image_2": "image/pro/pro-img-012.jpg",
-          "Product_Name": "Fresh mussel (500g)",
-          "Price": "$259.00 USD",
-          "Old_Price": "$360.00 USD"
-        }
+    {
+      "id": 1,
+      "Image_1": "/image/home-9/product/pro-3.jpg",
+      "Image_2": "image/home-9/product/pro-03.jpg",
+      "Product_Name": "Fresh Lamon",
+      "Price": "$130.00 USD",
+      "new": "new",
+      "Dis_count": "-20%",
+      "catogery": "Fruits",
+      "old_price": "$150.00 USD",
+      "rating": [
+        "c-star",
+        "c-star",
+        "c-star",
+        "o",
+        "o"
+      ]
+    },
+    {
+      "id": 2,
+      "Image_1": "/image/home-9/product/pro-4.jpg",
+      "Image_2": "image/home-9/product/pro-04.jpg",
+      "Product_Name": "Fresh Pineapple 100% organic",
+      "catogery": "Fruits",
+      "Price": "$117.00 USD",
+      "Dis_count": "6%",
+      "old_price": null,
+      "rating": [
+        "c-star",
+        "c-star",
+        "c-star",
+        "e-star",
+        "o"
+      ]
+    },
+    {
+      "id": 3,
+      "Image_1": "/image/home-9/product/pro-5.jpg",
+      "Image_2": "image/home-9/product/pro-05.jpg",
+      "Product_Name": "Fresh Banana",
+      "Dis_count": "-20%",
+      "Price": "$110.00 USD",
+      "catogery": "Fruits",
+      "Old_Price": "$160.00 USD",
+      "rating": [
+        "e-star",
+        "e-star",
+        "e-star",
+        "e-star",
+        "e-star"
+      ]
+    },
+    {
+      "id": 4,
+      "Image_1": "/image/home-9/product/pro-6.jpg",
+      "Image_2": "image/home-9/product/pro-06.jpg",
+      "Product_Name": "Organic Strawberry",
+      "catogery": "Fruits",
+      "Dis_count": "-15%",
+      "Price": "$120.00 USD",
+      "Old_Price": "$140.00 USD",
+      "rating": [
+        "c-star",
+        "c-star",
+        "c-star",
+        "o",
+        "o"
+      ]
+    },
+    {
+      "id": 5,
+      "Image_1": "/image/home-9/product/pro-7.jpg",
+      "Image_2": "image/home-9/product/pro-07.jpg",
+      "Product_Name": "Pomegranate",
+      "catogery": "Fruits",
+      "Dis_count": "-10%",
+      "Price": "$90.00 USD",
+      "Old_Price": "$100.00 USD",
+      "rating": [
+        "c-star",
+        "c-star",
+        "c-star",
+        "e-star",
+        "o"
+      ]
+    },
+    {
+      "id": 6,
+      "Image_1": "/image/home-9/product/pro-10.jpg",
+      "Image_2": "image/home-9/product/pro-010.jpg",
+      "Product_Name": "Mongo",
+      "catogery": "Fruits",
+      "Dis_count": "-9%",
+      "Price": "$230.00 USD",
+      "Old_Price": "",
+      "rating": [
+        "c-star",
+        "c-star",
+        "c-star",
+        "e-star",
+        "o"
+      ]
+    },
+    {
+      "id": 7,
+      "Image_1": "/image/home-9/product/pro-11.jpg",
+      "Image_2": "image/home-9/product/pro-011.jpg",
+      "Product_Name": "Fresh Apple 100% organic",
+      "Dis_count": "2%",
+      "Price": "$117.00 USD",
+      "catogery": "Furits",
+      "Old_Price": "",
+      "rating": [
+        "c-star",
+        "c-star",
+        "c-star",
+        "o",
+        "o"
+      ]
+    },
+    {
+      "id": 8,
+      "Image_1": "/image/home-9/product/pro-12.jpg",
+      "Image_2": "image/home-9/product/pro-012.jpg",
+      "Product_Name": "Fresh Coconut (150gm)",
+      "Dis_count": "-10%",
+      "Price": "$80.00 USD",
+      "catogery": "Fruits",
+      "Old_Price": "$90.00 USD",
+      "rating": [
+        "e-star",
+        "e-star",
+        "e-star",
+        "e-star",
+        "e-star"
+      ]
+    },
+    {
+      "id": 11,
+      "Image_1": "/image/home-14/pro-1.jpg",
+      "Image_2": "image/home-14/pro-01.jpg",
+      "Dis_count": "-10%",
+      "Product_Name": "Fresh Britannia",
+      "Price": "$120.00 USD",
+      "Old_Price": "$155.00 USD",
+      "catogery": "Bread"
+    },
+    {
+      "id": 12,
+      "Image_1": "/image/home-14/pro-2.jpg",
+      "Image_2": "image/home-14/pro-02.jpg",
+      "Dis_count": "-15%",
+      "Product_Name": "Organic Harvest",
+      "Price": "$110.00 USD",
+      "Old_Price": "$130.00 USD",
+      "catogery": "Bread"
+    },
+    {
+      "id": 13,
+      "Image_1": "/image/home-14/pro-3.jpg",
+      "Image_2": "image/home-14/pro-03.jpg",
+      "Dis_count": "-20%",
+      "Product_Name": " Brioche Bread",
+      "Price": "$90.00 USD",
+      "Old_Price": "$112.00 USD",
+      "catogery": "Bread"
+    },
+    {
+      "id": 14,
+      "Image_1": "/image/home-14/pro-4.jpg",
+      "Image_2": "image/home-14/pro-04.jpg",
+      "Dis_count": "-12%",
+      "Product_Name": "Ciabatta  Bread",
+      "Price": "$85.00 USD",
+      "Old_Price": "$97.00 USD",
+      "catogery": "Bread"
+    },
+    {
+      "id": 21,
+      "Image_1": "/image/home-16/product-img/pro-1.2.jpg",
+      "Image_2": "image/home-16/product-img/pro-1.1.jpg",
+      "Dis_count": "-10%",
+      "Product_Name": "Coconet juicy",
+      "Price": "€63.00",
+      "Old_Price": "€78.00",
+      "catogery": "juice"
+    },
+    {
+      "id": 22,
+      "Image_1": "/image/home-16/product-img/pro-2.2.jpg",
+      "Image_2": "image/home-16/product-img/pro-2.1.jpg",
+      "Dis_count": "-6%",
+      "Product_Name": "Orange juicy",
+      "Price": "€82.00",
+      "catogery": "juice"
+    },
+    {
+      "id": 23,
+      "Image_1": "/image/home-16/product-img/pro-3.2.jpg",
+      "Image_2": "image/home-16/product-img/pro-3.1.jpg",
+      "Dis_count": "-8%",
+      "Product_Name": "Kiwi juicy",
+      "Price": "€60.00",
+      "Old_Price": "€85.00",
+      "catogery": "juice"
+    },
+    {
+      "id": 24,
+      "Image_1": "/image/home-16/product-img/pro-4.2.jpg",
+      "Image_2": "image/home-16/product-img/pro-4.1.jpg",
+      "Dis_count": "-1%",
+      "Product_Name": "lamon juicy",
+      "Price": "€33.00",
+      "Old_Price": "€45.00",
+      "catogery": "juice"
+    },
+    {
+      "id": 25,
+      "Image_1": "/image/home-16/product-img/pro-5.2.jpg",
+      "Image_2": "image/home-16/product-img/pro-5.1.jpg",
+      "Dis_count": "-5%",
+      "Product_Name": "strawberry juicy",
+      "Price": "€45.00",
+      "Old_Price": "€60.00",
+      "catogery": "juice"
+    },
+    {
+      "id": 31,
+      "Image_1": "/image/pro/pro-img-1.jpg",
+      "Image_2": "image/pro/pro-img-01.jpg",
+      "Product_Name": "Fresh organic Muskmelon (500gm)",
+      "Price": "$130.00 USD",
+      "catogery": "Vegetables"
+    },
+    {
+      "id": 32,
+      "Image_1": "/image/pro/pro-img-2.jpg",
+      "Image_2": "image/pro/pro-img-02.jpg",
+      "Product_Name": "Fresh Brinjal  ",
+      "Price": "$160.00 USD",
+      "catogery": "Vegetables"
+    },
+    {
+      "id": 33,
+      "Image_1": "/image/pro/pro-img-3.jpg",
+      "Image_2": "image/pro/pro-img-03.jpg",
+      "Product_Name": "Fresh apple",
+      "Price": "$110.00 USD",
+      "Old_Price": "$115.00 USD"
+    },
+    {
+      "id": 34,
+      "Image_1": "/image/pro/pro-img-4.jpg",
+      "Image_2": "image/pro/pro-img-04.jpg",
+      "Product_Name": "Fresh organic fruit (50gm)",
+      "Price": "$170.00 USD",
+      "catogery": "Vegetables"
+    },
+    {
+      "id": 35,
+      "Image_1": "/image/pro/pro-img-5.jpg",
+      "Image_2": "image/pro/pro-img-05.jpg",
+      "Product_Name": "Vegetable tomato fresh",
+      "Price": "$140.00 USD",
+      "Old_Price": "$155.00 USD",
+      "catogery": "Vegetables"
+    },
+    {
+      "id": 36,
+      "Image_1": "/image/pro/pro-img-6.jpg",
+      "Image_2": "image/pro/pro-img-06.jpg",
+      "Product_Name": "Natural grassbean",
+      "Price": "$139.00 USD",
+      "Old_Price": "$160.00 USD",
+      "catogery": "Vegetables"
+    },
+    {
+      "id": 37,
+      "Image_1": "/image/pro/pro-img-7.jpg",
+      "Image_2": "image/pro/pro-img-07.jpg",
+      "Product_Name": "Fresh dryed almod (50gm)",
+      "Price": "$539.00 USD",
+      "Old_Price": "$560.00 USD",
+      "catogery": "Vegetables"
+    },
+    {
+      "id": 38,
+      "Image_1": "/image/pro/pro-img-8.jpg",
+      "Image_2": "image/pro/pro-img-08.jpg",
+      "Product_Name": "Orange juice (5ltr)",
+      "Price": "$60.00 USD",
+      "catogery": "Vegetables"
+    },
+    {
+      "id": 39,
+      "Image_1": "/image/pro/pro-img-9.jpg",
+      "Image_2": "image/pro/pro-img-09.jpg",
+      "Product_Name": "Organic coconet (5ltr) juice",
+      "Price": "$110.00 USD",
+      "Old_Price": "$115.00 USD",
+      "catogery": "Vegetables"
+    },
+    {
+      "id": 40,
+      "Image_1": "/image/pro/pro-img-15.jpg",
+      "Image_2": "image/pro/pro-img-015.jpg",
+      "Product_Name": "carrots ",
+      "Price": "$170.00 USD",
+      "catogery": "Vegetables"
+    },
+    {
+      "id": 41,
+      "Image_1": "/image/pro/pro-img-11.jpg",
+      "Image_2": "image/pro/pro-img-011.jpg",
+      "Product_Name": "Sp.red fresh guava",
+      "Price": "$140.00 USD",
+      "Old_Price": "$15.00 USD",
+      "catogery": "Vegetables"
+    },
+    {
+      "id": 42,
+      "Image_1": "/image/pro/pro-img-12.jpg",
+      "Image_2": "image/pro/pro-img-012.jpg",
+      "Product_Name": "Fresh mussel (500g)",
+      "Price": "$259.00 USD",
+      "Old_Price": "$360.00 USD",
+      "catogery": "Vegetables"
+    }
+  ],
+  "catogery": [
+    {
+      "id":1,
+      "catogery_name":"Bread"
+    },
+    {
+      "id":2,
+      "catogery_name":"juice"
+    },
+    {
+      "id":3,
+      "catogery_name":"Vegetables"
+    },
+    {
+      "id":4,
+      "catogery_name":"Fruits"
+    }
   ]
 }

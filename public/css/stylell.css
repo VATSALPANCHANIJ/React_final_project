@@ -13,9 +13,8 @@
     color: black !important;
     transition: all 0.9s !important;
 }
-.pro-icn  a{
+.pro-icn a {
     margin: 10px 5px !important;
-
 }
 .icns a:hover {
     color: rgb(255, 191, 0) !important;
@@ -53,7 +52,26 @@
     text-decoration: none !important;
     border-color: #f5ab1e !important;
 }
-.btn-style10:hover{
-    background-color:transparent !important;
-    color: #f5ab1e !important
+.btn-style10:hover {
+    background-color: transparent !important;
+    color: #f5ab1e !important;
+}
+.Product_name {
+    font-size: 18px;
+    font-weight: 400;
+    font-family: "Poppins", sans-serif;
+    margin-bottom: 10px;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 20px;
+    width: 200px !important;
+    transition: all 1.2s;
+}
+.Product_name:hover {
+    transition: all 1.2s;
+    color: #f5ab1e !important;
+    background-color: #b6b6b681 !important;
+}
+.Product_name:focus {
+    color: #f5ab1e !important;
 }
