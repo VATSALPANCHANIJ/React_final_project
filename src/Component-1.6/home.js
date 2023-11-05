@@ -22,7 +22,7 @@ const Home = () => {
         // Simulate an asynchronous action (e.g., fetching data from an API)
         setTimeout(() => {
             setLoading(false);
-        }, 5000);
+        }, 1000);
     }, []);
     // 1
     const fetch_slider = async () => {
@@ -201,11 +201,10 @@ const Home = () => {
                                                     <div className="pro-icn">
                                                         <div className="row ">
                                                             <Link to={``} className="icn icns"><i className="fa fa-heart" /></Link>
-                                                            <Link to={`/Cart`} className="icn"><i className="fa fa-shopping-bag" /></Link>
-                                                            <Link to={`/Product/${`Featured_products`}/${val.id}`} href="javascript:void(0)" className="icn"><i className="fa fa-eye" /></Link>
+                                                            <Link to={``} className="icn"><i className="fa fa-shopping-bag" /></Link>
+                                                            <Link to={`/Product/${`Featured_products`}/${val.id}`} className="icn"><i className="fa fa-eye" /></Link>
                                                         </div>
                                                     </div>
-
                                                 </div>
                                                 <div className="caption">
                                                     <h3><a href="product-style-6.html">{val.Product_Name}</a></h3>

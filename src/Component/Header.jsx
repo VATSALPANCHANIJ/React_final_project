@@ -136,9 +136,9 @@ const Header = () => {
                                                 <li className="side-wrap user-wrap">
                                                     <div className="acc-desk">
                                                         <div className="user-icon">
-                                                            <a href="account.html" className="user-icon-desk">
+                                                            <Link to={'/Account'} className="user-icon-desk">
                                                                 <span><i className="icon-user" /></span>
-                                                            </a>
+                                                            </Link>
                                                         </div>
                                                         <div className="user-info">
                                                             <span className="acc-title">Account</span>
@@ -157,7 +157,6 @@ const Header = () => {
                                                 <li className="side-wrap wishlist-wrap">
                                                     <a href="wishlist-empty.html" className="header-wishlist">
                                                         <span className="wishlist-icon"><i className="icon-heart" /></span>
-                                                        <span className="wishlist-counter">0</span>
                                                     </a>
                                                 </li>
                                                 <li className="side-wrap cart-wrap">
@@ -167,7 +166,6 @@ const Header = () => {
                                                                 <span className="cart-icon-wrap">
                                                                     <Link to='/Cart'>
                                                                         <span className="cart-icon"><i className="icon-handbag" /></span>
-                                                                        <span id="cart-total" className="bigcounter">0</span>
                                                                     </Link>
                                                                 </span>
                                                             </a>

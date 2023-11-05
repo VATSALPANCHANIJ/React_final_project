@@ -3,30 +3,36 @@ import ReactDOM from "react-dom";
 import Loader from "./Loader";
 import { Link } from "react-router-dom";
 import axios from "axios";
+
 const Shop = () => {
-    const [loading, setLoading] = useState(true);
     const [allProducts, setAllProducts] = useState([]);
     const [currentPage, setCurrentPage] = useState(1);
     const [category, setCategory] = useState([]);
     const [product, setProduct] = useState();
+    const [loading, setLoading] = useState(true);
+    const [highprice, setHighprice] = useState('HighlowTo');
+    const [lowprice, setlowprice] = useState('LowToHigh');
+    const [searchTerm, setSearchTerm] = useState('');
+    const [currentProduct, setCurrentProduct] = useState([]);
+    const [status, setStatus] = useState("");
 
+    // all products show
     const Fetch_AllProducts = async () => {
         try {
             const res = await axios.get("http://localhost:3030/AllProduct_show_shop_page")
             setAllProducts(res.data);
-            console.log(res.data);
-
+            setCurrentProduct(res.data);
         } catch (error) {
             console.log(error);
         }
     }
 
+    //catogory filter
     //show 4 type of products veg, furits, etc...
     const allcatogory = () => {
         axios.get(`http://localhost:3030/catogery`)
             .then((response) => {
                 setCategory(response.data);
-                console.log(response.data);
             }).catch((error) => {
                 console.log(error);
                 return false;
@@ -39,15 +45,13 @@ const Shop = () => {
         } else {
             axios.get(`http://localhost:3030/AllProduct_show_shop_page?catogery=${catogerydata}`).then((response) => {
                 setAllProducts(response.data);
-                console.log(response.data)
+
             }).catch((error) => {
                 console.log(error);
                 return false;
             })
         }
     }
-
-
 
     // pagination code for
     const recordsPerPage = 12;
@@ -68,10 +72,54 @@ const Shop = () => {
         setCurrentPage(id);
     }
 
+    // Price low to high
+    const handleSort = (order) => {
+        if (highprice === order) {
+            setAllProducts([...allProducts].reverse());
+            setHighprice(order === 'HighlowTo' ? 'LowToHigh' : 'HighlowTo');
+        } else {
+            setAllProducts([...allProducts].sort((a, b) => a.Price - b.Price));
+            setHighprice(order);
+        }
+    };
+    const handleLow = (order) => {
+        if (lowprice === order) {
+            setAllProducts([...allProducts].reverse());
+            setlowprice(order === 'LowToHigh' ? 'HighlowTo' : 'LowToHigh');
+        } else {
+            setAllProducts([...allProducts].sort((a, b) => b.Price - a.Price));
+            setlowprice(order);
+        }
+    };
+
+    //serach method
+    const handleSearch = (event) => {
+        setSearchTerm(event.target.value);
+    };
+    //serach method
+    useEffect(() => {
+        const filteredProducts = allProducts.filter(product =>
+            product.Product_Name.toLowerCase().includes(searchTerm.toLowerCase())
+        );
+        setCurrentProduct(filteredProducts);
+    }, [searchTerm, allProducts]);
+
+    // status update
+    useEffect(() => {
+        axios.get(`http://localhost:3030/AllProduct_show_shop_page?Marketstatus=${status}&status=instock`).then((res) => {
+        // console.log(res);    
+        setAllProducts(res.data);
+            console.log(res.data);
+        }).catch((err) => {
+            console.log(err);
+            return false;
+        })
+
+    }, [status])
 
     useEffect(() => {
         Fetch_AllProducts();
-        // categoryFilter();
+
         allcatogory()
         // Simulate an asynchronous action (e.g., fetching data from an API)
         setTimeout(() => {
@@ -89,15 +137,14 @@ const Shop = () => {
                     <section className="section-tb-padding">
                         <div className="container">
                             <div className="row" >
-                                <div className="col-lg-3 col-md-4 col-12 ">
-                                    <div className="all-filter">
-                                        <div className="categories-page-filter mt-5 text-center" style={{position :'fixed'}} >
+                                <div className="col-lg-3 col-md-4 col-12 text-center " >
+                                    <div className="all-filter" style={{ position: "fixed" }}>
+                                        <div className="categories-page-filter mt-5"  >
                                             <h3 class="filter-title">Categories</h3>
-                                            <a href="#category-filter" data-bs-toggle="collapse" className="filter-link"><span>Categories </span><i className="fa fa-angle-down" /></a>
-                                            <ul className="all-option collapse" id="category-filter">
+                                            <a className="filter-link"><span>Categories </span><i className="fa fa-angle-down" /></a>
+                                            <ul className="all-option collapse">
                                                 {category.map((val) => (
-                                                    <li className="Product_name"  key={val.catogery_name} onClick={() => categoryFilter(val.catogery_name)}dgmgkmsgmskgmlsgml>
-                                                        {/* <input type="checkbox" onClick={() => categoryFilter(val.catogery_name)} /> */}
+                                                    <li className="Product_name col-4" key={val.catogery_name} onClick={() => categoryFilter(val.catogery_name)} dgmgkmsgmskgmlsgml>
                                                         <a style={{ cursor: 'pointer' }} onClick={() => categoryFilter(val.catogery_name)}>{val.catogery_name}</a>
                                                     </li>
                                                 ))}
@@ -108,7 +155,24 @@ const Shop = () => {
                                             </ul>
 
                                         </div>
+                                        <div className="card" style={{ width: '18rem' }}>
+                                            <ul className="list-group list-group-flush">
+                                                <>
+                                                    <ul className="list-group">
+                                                        <li className="list-group-item p-3">
+                                                            <button className="btn btn-outline-secondary w-100" onClick={() => handleSort('HighlowTo')}>Price Low to High</button>
+                                                        </li>
+                                                        <li className="list-group-item p-3">
+                                                            <button className="btn btn-outline-secondary w-100" onClick={() => handleLow('LowToHigh')}>Price High To Low</button>
+                                                        </li>
+                                                    </ul>
+
+                                                </>
+
+                                            </ul>
+                                        </div>
                                     </div>
+
 
                                 </div>
 
@@ -119,11 +183,27 @@ const Shop = () => {
                                             <p>Praesent dapibus, neque id cursus Ucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, facilisis luc...</p>
                                         </div>
                                     </div>
+                                    <input
+                                        type="text"
+                                        placeholder="Search products..."
+                                        value={searchTerm}
+                                        onChange={handleSearch}
+                                        className="border border-warning col-4"
+
+                                    />
+
+                                    <select onChange={(e) => setStatus(e.target.value)} className='form'>
+                                        <option>--- select status----</option>
+                                        <option value="best">Best</option>
+                                        <option value="Upcomming">Upcomming</option>
+                                        <option value="Trending">Trending</option>
+                                        <option value="latest">latest</option>
+                                    </select>
                                     <div className="grid-4-product">
                                         <div className="grid-pro">
                                             <ul className="grid-product">
                                                 {
-                                                    currentProducts.map((val) => {
+                                                    currentProduct.map((val) => {
                                                         return (
                                                             <li className="grid-items">
                                                                 <div className="tred-pro">
@@ -171,7 +251,7 @@ const Shop = () => {
 
                                             {numbers.map((n, i) => (
                                                 <li className={`page-link ${currentPage === n ? 'active' : ''}`} key={i}>
-                                                    <a href="#" className='page-link' onClick={() => changeCPage(n)}>{n}</a>
+                                                    <a href="#" onClick={() => changeCPage(n)}>{n}</a>
                                                 </li>
                                             ))}
 

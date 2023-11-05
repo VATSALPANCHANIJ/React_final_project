@@ -2643,11 +2643,14 @@ a.scroll:hover span{
     flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
+    align-items: center ;
 }
 .cart-area .cart-details .cart-all-pro .cart-pro{
-    width: 60%;
+    width: 31% !important;
     margin-top: 20px;
     display: flex;
+    align-items: center !important;
+ 
 }
 .cart-area .cart-details .cart-all-pro .cart-pro .cart-pro-image{
     margin-right: 15px;

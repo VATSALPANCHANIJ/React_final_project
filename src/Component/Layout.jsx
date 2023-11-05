@@ -5,27 +5,19 @@ import Footer from './Footer';
 import Loader from "./Loader";
 
 const Layout = () => {
-  const [loading, setLoading] = useState(true);
-  useEffect(() => {
-    // Simulate an asynchronous action (e.g., fetching data from an API)
-    setTimeout(() => {
-      setLoading(false);
-    }, 5000);
-  }, []);
+ 
   return (
-    <div className="sweet-loading" style={{ backgroundColor: loading ? '#F5AB1E' : '#FFFFFF', minHeight: '100vh' }}>
+    <div className="sweet-loading">
 
-      {loading ? (
-        <Loader />
-      ) : (
+     
         <>
           <Header />
-          <main style={{ minHeight: '85vh' }}>
+          <main style={{ minHeight: '100vh' }}>
             <Outlet /> {/* This is where child components will be rendered */}
           </main>
           <Footer />
         </>
-      )}
+      
     </div>
   );
 };

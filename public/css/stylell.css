@@ -64,14 +64,25 @@
     text-align: center;
     cursor: pointer;
     border-radius: 20px;
-    width: 200px !important;
+    width: 300px !important;
     transition: all 1.2s;
 }
 .Product_name:hover {
     transition: all 1.2s;
     color: #f5ab1e !important;
-    background-color: #b6b6b681 !important;
+    background-color: #ffffff81 !important;
 }
 .Product_name:focus {
     color: #f5ab1e !important;
+}
+.cart_page_image{
+    width: 250px !important;
+}
+.cart-page{
+    font-family: "Poppins", sans-serif !important;
+
+}
+.my h5{
+    color: #f5ab1e !important;
+    text-align: center !important;
 }

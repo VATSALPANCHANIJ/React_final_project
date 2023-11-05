@@ -1,7 +1,18 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './App.css';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+
+// addmin site all actions
+import AdminLayout from './Admin/Adminlayout/AdminLayout';
+import Dashboard from './Admin/dashborad';
+import AdminProductshow from './Admin/productshow';
+import AdminLogin from './Admin/login';
+import Users_detail from './Admin/Userdetail';
+import Category from './Admin/CategoryAdd';
+
+
+// user side all actions
 import Home from './Component-1.6/home';
 import Layout from './Component/Layout';
 import Productshow from './Component-1.6/Productshow';
@@ -9,6 +20,7 @@ import Login from './Component-1.6/login';
 import Register from './Component-1.6/Resgister';
 import Cart from './Component-1.6/Cart';
 import Shop from './Component-1.6/Shop';
+import Account from './Component-1.6/useraccount';
 function App() {
   return (
     <>
@@ -21,7 +33,18 @@ function App() {
           <Route path="/Register" element={<Register />} />
           <Route path="/Cart" element={<Cart />} />
           <Route path="/Shop" element={<Shop />} />
+          <Route path="/Account" element={<Account />} />
+
         </Route>
+
+        <Route element={<AdminLayout />} >
+          <Route path='/admin/dashborad' element={<Dashboard />} ></Route>
+          <Route path='/admin/AdminProductshow' element={<AdminProductshow />} ></Route>
+          <Route path='/admin/Users_detail' element={<Users_detail />} ></Route>
+          <Route path='/admin/Category' element={<Category />} ></Route>
+        </Route>
+        <Route path='/admin/Login' element={<AdminLogin />} ></Route>
+
       </Routes>
     </>
   );
