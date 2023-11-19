@@ -11,7 +11,7 @@ const Cart = () => {
     const [cartData, setCartData] = useState([]);
     const [quantity, setQuantity] = useState(1);
     const [loading, setLoading] = useState(true);
-    const [subtotal, setSubtotal] = useState([]);
+    const [subtotal, setSubtotal] = React.useState(0);
     //products count
     const totalProductsInCart = cartData.length;
 
@@ -74,7 +74,8 @@ const Cart = () => {
         // Make sure price and quantity are valid numbers
         const newPrice = parseFloat(price);
         const newQuantity = parseInt(quantity);
-
+        const totalPrice = parseFloat(newPrice);
+        calculateSubtotal();
         // Calculate the new total price
         if (newQuantity >= 1) {
             // Calculate the new total price
@@ -112,6 +113,16 @@ const Cart = () => {
             });
         }
     }
+    const calculateSubtotal = () => {
+        let newSubtotal = 0;
+        // Iterate over your items and calculate the subtotal
+        // Assuming `items` is an array containing your items
+        items.forEach((val) => {
+            newSubtotal += val.price * val.quantity;
+        });
+        setSubtotal(newSubtotal);
+    };
+
 
     useEffect(() => {
         Featured_All_products();
@@ -137,7 +148,7 @@ const Cart = () => {
     }, [])
 
     return (
-        <div className="sweet-loading" style={{ backgroundColor: loading ? '#F5AB1E' : '#FFFFFF', minHeight: '100vh' }}>
+        <div className="sweet-loading" style={{ backgroundColor: loading ? '' : '', minHeight: '100vh' }}>
 
             {loading ? (
                 <Loader />
@@ -204,7 +215,7 @@ const Cart = () => {
                                     <div className="cart-total">
                                         <div className="cart-price">
                                             <span>Subtotal</span>
-                                            {/* <span className="total">${subtotal}</span> */}
+                                            <span className="total">${subtotal}</span>
                                         </div>
                                         <div className="cart-info">
                                             <h4>Shipping info</h4>
@@ -237,7 +248,7 @@ const Cart = () => {
                                         </div>
                                         <div className="shop-total">
                                             <span>Total</span>
-                                            <span className="total-amount">{subtotal}</span>
+                                            {/* <span className="total-amount">{subtotal}</span> */}
                                         </div>
                                         <a className="check-link btn btn-style10">Checkout</a>
                                     </div>

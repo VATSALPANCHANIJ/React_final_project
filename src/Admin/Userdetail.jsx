@@ -1,7 +1,21 @@
+import { useEffect } from "react";
+import { useState } from "react";
+import axios from "axios";
+import { Link } from 'react-router-dom';
 const Users_detail = () => {
+    const [user, setUser] = useState();
+    useEffect(() => {
+        axios.get(`http://localhost:3030/User_Resigeters_data`)
+            .then((res) => {
+                setUser(res.data)
+            })
+            .catch((err) => {
+                console.log(err, "Error: show user_details_page failed");
+                return false
+            });
+    }, [])
     return (
         <>
-
             <div className="row justify-content-betweeb">
                 <div className="col-2"></div>
                 <div className="col-10">
@@ -12,11 +26,29 @@ const Users_detail = () => {
                                     <thead>
                                         <tr>
                                             <th>User Id</th>
-                                            <th>User Name</th>
+                                            <th>User firstname</th>
+                                            <th>User Lastname</th>
                                             <th>User Email</th>
                                             <th>View Cart</th>
                                         </tr>
                                     </thead>
+                                    {
+                                        user && user.map((val) => {
+                                            return (
+                                                <tr>
+                                                    <td>{val.id}</td>
+                                                    <td>{val.firstname}</td>
+                                                    <td>{val.lastname}</td>
+                                                    <td>{val.email}</td>
+                                                    <td>
+                                                        <Link to={`/admin/Userproductshow/${val.id}`}>
+                                                            <button>view Product</button>
+                                                        </Link>
+                                                    </td>
+                                                </tr>
+                                            )
+                                        })
+                                    }
                                 </table>
                             </div>
                         </div>
@@ -26,5 +58,4 @@ const Users_detail = () => {
         </>
     )
 }
-
 export default Users_detail;

@@ -104,6 +104,7 @@ const Shop = () => {
         setCurrentProduct(filteredProducts);
     }, [searchTerm, allProducts]);
 
+    
     // status update
     useEffect(() => {
         axios.get(`http://localhost:3030/AllProduct_show_shop_page?Marketstatus=${status}&status=instock`).then((res) => {
@@ -128,7 +129,7 @@ const Shop = () => {
     }, []);
 
     return (
-        <div className="sweet-loading" style={{ backgroundColor: loading ? '#F5AB1E' : '#FFFFFF', minHeight: '100vh' }}>
+        <div className="sweet-loading" style={{ backgroundColor: loading ? '' : '', minHeight: '100vh' }}>
 
             {loading ? (
                 <Loader />

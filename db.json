@@ -2,9 +2,10 @@
   "User_Resigeters_data": [
     {
       "firstname": "Vatsal",
-      "Lastname": "panchani",
-      "email": "vatsal@gmail.com",
+      "lastname": "panchani",
+      "email": "vatsal@admin.com",
       "password": "852",
+      "role": "admin",
       "id": 1
     },
     {
@@ -34,6 +35,13 @@
       "email": "fa",
       "password": "fsa",
       "id": 5
+    },
+    {
+      "firstname": "a",
+      "lastname": "a",
+      "email": "a@g.cm",
+      "password": "z",
+      "id": 6
     }
   ],
   "RecentNews": [
@@ -488,7 +496,7 @@
       "Price": "160.00",
       "catogery": "Vegetables",
       "status": "instock",
-      "Marketstatus": "best"
+      "Marketstatus": "upcoming"
     },
     {
       "id": 3,
@@ -572,7 +580,7 @@
       "Product_Name": "carrots ",
       "Price": "170.00",
       "catogery": "Vegetables",
-      "Marketstatus": "best"
+      "Marketstatus": "Trending"
     },
     {
       "status": "instock",
@@ -603,7 +611,7 @@
         "o",
         "o"
       ],
-      "Marketstatus": "Trending"
+      "Marketstatus": "best"
     },
     {
       "status": "instock",
@@ -651,7 +659,7 @@
         "e-star",
         "e-star"
       ],
-      "Marketstatus": "Upcomming"
+      "Marketstatus": "treding"
     },
     {
       "id": 16,
@@ -670,7 +678,7 @@
         "o",
         "o"
       ],
-      "Marketstatus": "best"
+      "Marketstatus": "upcoming"
     },
     {
       "id": 17,
@@ -690,25 +698,6 @@
         "o"
       ],
       "Marketstatus": "Upcomming"
-    },
-    {
-      "id": 18,
-      "Image_1": "/image/home-9/product/pro-10.jpg",
-      "Image_2": "image/home-9/product/pro-010.jpg",
-      "Product_Name": "Mongo",
-      "catogery": "Fruits",
-      "Dis_count": "-9%",
-      "Price": "230.00",
-      "Old_Price": "",
-      "status": "instock",
-      "rating": [
-        "c-star",
-        "c-star",
-        "c-star",
-        "e-star",
-        "o"
-      ],
-      "Marketstatus": "best"
     },
     {
       "id": 19,
@@ -841,7 +830,7 @@
       "Price": "60.00",
       "Old_Price": "85.00",
       "catogery": "juice",
-      "Marketstatus": "best"
+      "Marketstatus": "Trending"
     },
     {
       "id": 29,
@@ -853,7 +842,7 @@
       "Price": "33.00",
       "Old_Price": "45.00",
       "catogery": "juice",
-      "Marketstatus": "Trending"
+      "Marketstatus": "best"
     },
     {
       "id": 30,
@@ -888,28 +877,36 @@
   ],
   "user_cart_system": [
     {
-      "Image_1": "/image/pro/pro-img-3.jpg",
-      "Product_Name": "Fresh apple",
-      "userId": 1,
-      "price": 110,
-      "quantity": 2,
+      "Image_1": "/image/pro/pro-img-11.jpg",
+      "Product_Name": "Sp.red fresh guava",
+      "userId": 2,
+      "price": 140,
+      "quantity": 6,
       "id": 1
     },
     {
-      "Image_1": "/image/home-9/product/pro-6.jpg",
-      "Product_Name": "Organic Strawberry",
+      "Image_1": "/image/home-16/product-img/pro-2.2.jpg",
+      "Product_Name": "Orange juicy",
       "userId": 2,
-      "price": "120.00",
+      "price": "82.00",
       "quantity": 1,
       "id": 2
     },
     {
-      "Image_1": "/image/pro/pro-img-7.jpg",
-      "Product_Name": "Fresh dryed almod (50gm)",
-      "userId": 1,
-      "price": 539,
-      "quantity": 2,
+      "Image_1": "/image/home-9/product/pro-12.jpg",
+      "Product_Name": "Fresh Coconut (150gm)",
+      "userId": 2,
+      "price": "80.00",
+      "quantity": 1,
       "id": 3
+    },
+    {
+      "Image_1": "/image/pro/pro-img-11.jpg",
+      "Product_Name": "Sp.red fresh guava",
+      "userId": 2,
+      "price": "140.00",
+      "quantity": 1,
+      "id": 4
     }
   ]
 }

@@ -17,7 +17,6 @@ const Home = () => {
     const [juicebottle, setJuicebottle] = useState([]);
     // const [loading, setLoading] = useState(true);
     const [loading, setLoading] = useState(true);
-
     useEffect(() => {
         // Simulate an asynchronous action (e.g., fetching data from an API)
         setTimeout(() => {
@@ -102,9 +101,8 @@ const Home = () => {
         fetch_fruits_juice_bottle();
         fetch_RecentNews();
     }, []);
-
     return (
-        <div className="sweet-loading" style={{ backgroundColor: loading ? '#F5AB1E' : '#FFFFFF', minHeight: '100vh' }}>
+        <div className="sweet-loading" style={{ backgroundColor: loading ? '' : '', minHeight: '100vh' }}>
 
             {loading ? (
                 <Loader />
@@ -818,5 +816,4 @@ const Home = () => {
         </div>
     );
 }
-
 export default Home;

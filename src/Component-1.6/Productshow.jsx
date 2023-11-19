@@ -69,7 +69,7 @@ const Productshow = () => {
                             userId: checkUserLogin().id,
                             price: res.data.Price,
                             quantity: 1,
-                          }]);
+                        }]);
                         toast.success('Product successfully added to cart', {
                             position: "top-center",
                             autoClose: 2000,
@@ -106,7 +106,7 @@ const Productshow = () => {
     }, [])
 
     return (
-        <div className="sweet-loading" style={{ backgroundColor: loading ? '#F5AB1E' : '#FFFFFF', minHeight: '100vh' }}>
+        <div className="sweet-loading" style={{ backgroundColor: loading ? '' : '', minHeight: '100vh' }}>
 
             {loading ? (
                 <Loader />
@@ -182,18 +182,18 @@ const Productshow = () => {
 
                                 </div>
                             </div>
-                                <ToastContainer
-                                    position="top-right"
-                                    autoClose={2000}
-                                    hideProgressBar={false}
-                                    newestOnTop={false}
-                                    closeOnClick
-                                    rtl={false}
-                                    pauseOnFocusLoss
-                                    draggable
-                                    pauseOnHover
-                                    theme="dark"
-                                />
+                            <ToastContainer
+                                position="top-right"
+                                autoClose={2000}
+                                hideProgressBar={false}
+                                newestOnTop={false}
+                                closeOnClick
+                                rtl={false}
+                                pauseOnFocusLoss
+                                draggable
+                                pauseOnHover
+                                theme="dark"
+                            />
                         </div>
                     </section>
                     </>

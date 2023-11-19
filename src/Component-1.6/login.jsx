@@ -34,6 +34,21 @@ const Login = () => {
                 return false;
             }
             localStorage.setItem('checkUserLogin', JSON.stringify(users_add.data[0]));
+            toast.error('Successfully login', {
+                position: "top-right",
+                autoClose: 2000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: true,
+                progress: undefined,
+                theme: "dark",
+                style: {
+                    width: '400px',
+                },
+
+
+            });
             setEmail("");
             setPassword("");
             navigate('/Cart');
@@ -41,6 +56,57 @@ const Login = () => {
             console.log(error);
             return false;
         }
+        // AdminLayout
+        // try {
+        //     let users_add = await axios.get(`http://localhost:3030/User_Resigeters_data?email=${email}&password=${password}`);
+        //     // users_add
+        //     if (users_add.data.length === 0) {
+        //         toast.error("Email and Password not valid");
+        //         navigate('/Cart');
+        //         alert("Success user");
+        //         return false;
+
+        //     }
+        //     localStorage.setItem('checkUserLogin', JSON.stringify(users_add.data[0]));
+        //     setEmail("");
+        //     setPassword("");
+        //     navigate('/Cart');
+
+        //     toast.success("Successfully Login");
+
+        //     //admin.navigate
+        //     if (users_add.data[0].role === 'admin') {
+        //         localStorage.setItem('checkAdminLogin', JSON.stringify(users_add.data[0]));
+        //         setEmail("");
+        //         setPassword("");
+        //         navigate('/Admin/dashborad');
+        //         alert("Success");
+        //     } else {
+        //         if (users_add.data.length === 0) {
+        //             toast.error('Your Account is not found in our database', {
+        //                 position: "top-right",
+        //                 autoClose: 2000,
+        //                 hideProgressBar: false,
+        //                 closeOnClick: true,
+        //                 pauseOnHover: true,
+        //                 draggable: true,
+        //                 progress: undefined,
+        //                 theme: "dark",
+        //                 style: {
+        //                     width: '400px',
+        //                 },
+        //             });
+        //             navigate('/Login');
+        //             setEmail("");
+        //             setPassword("");
+        //             return false;
+        //         }
+
+        //     }
+        // } catch (error) {
+        //     console.log(error);
+        //     return false;
+        // }
 
     }
     return (
