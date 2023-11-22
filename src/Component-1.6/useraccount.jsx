@@ -8,9 +8,11 @@ const Account = () => {
     const [UserInformation, setUserInformation] = useState(null);
 
     const logout = () => {
-        alert("done")
-        toast.success('All Product Remove from cart page', {
-            position: "top-center",
+        navigate('/Login');
+        localStorage.removeItem('checkUserLogin');
+
+        toast.success('successful logout', {
+            position: "top-right",
             autoClose: 1000,
             hideProgressBar: false,
             closeOnClick: true,
@@ -22,8 +24,7 @@ const Account = () => {
                 width: '400px',
             },
         });
-        localStorage.removeItem('checkUserLogin');
-        navigate('/Login');
+
     }
     useEffect(() => {
         const storedData = localStorage.getItem('checkUserLogin');
@@ -36,6 +37,7 @@ const Account = () => {
                 console.error('Error parsing data from localStorage:', error);
             }
         }
+
     }, []);
     return (
         <>
@@ -112,6 +114,18 @@ const Account = () => {
                         </div>
                     </div>
                 </div>
+                <ToastContainer
+                    position="top-right"
+                    autoClose={1000}
+                    hideProgressBar={false}
+                    newestOnTop={false}
+                    closeOnClick
+                    rtl={false}
+                    pauseOnFocusLoss
+                    draggable
+                    pauseOnHover
+                    theme="dark"
+                />
             </section>
 
         </>

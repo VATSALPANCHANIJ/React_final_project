@@ -4,6 +4,7 @@ import { useNavigate } from 'react-router-dom';
 import { useState } from 'react';
 import axios from 'axios';
 import { useEffect } from 'react';
+import { Link } from 'react-router-dom';
 const Dashboard = () => {
     const navigate = useNavigate()
     const [usercnt, setUserCnt] = useState(0);
@@ -44,18 +45,24 @@ const Dashboard = () => {
 
     return (
         <div className="dashboard-container">
-            <div className="dashboard-box">
-                <h1>Users</h1>
-                <span>{usercnt}</span>
-            </div>
-            <div className="dashboard-box">
-                <h1>Category</h1>
-                <span>{categorycnt}</span>
-            </div>
-            <div className="dashboard-box">
-                <h1>Products</h1>
-                <span>{productcnt}</span>
-            </div>
+            <Link to={'/admin/Users_detail'}>
+                <div className="dashboard-box">
+                    <h1>Users</h1>
+                    <span>{usercnt}</span>
+                </div>
+            </Link>
+            <Link to={'/admin/Category'}>
+                <div className="dashboard-box">
+                    <h1>Category</h1>
+                    <span>{categorycnt}</span>
+                </div>
+            </Link>
+            <Link to={'/admin/AdminProductshow'}>
+                <div className="dashboard-box">
+                    <h1>Products</h1>
+                    <span>{productcnt}</span>
+                </div>
+            </Link>
             <div className="dashboard-box">
                 <h1>Slider</h1>
                 <span>{slidercnt}</span>

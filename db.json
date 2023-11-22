@@ -42,6 +42,13 @@
       "email": "a@g.cm",
       "password": "z",
       "id": 6
+    },
+    {
+      "firstname": "dm",
+      "lastname": "mg",
+      "email": "mg@gmail.com",
+      "password": "852",
+      "id": 7
     }
   ],
   "RecentNews": [
@@ -486,7 +493,7 @@
       "Price": "130.00",
       "catogery": "Vegetables",
       "Marketstatus": "best",
-      "status": "instock"
+      "status": "out of stock"
     },
     {
       "id": 2,
@@ -496,7 +503,7 @@
       "Price": "160.00",
       "catogery": "Vegetables",
       "status": "instock",
-      "Marketstatus": "upcoming"
+      "Marketstatus": "Trending"
     },
     {
       "id": 3,
@@ -700,7 +707,7 @@
       "Marketstatus": "Upcomming"
     },
     {
-      "id": 19,
+      "id": 18,
       "Image_1": "/image/home-9/product/pro-11.jpg",
       "Image_2": "image/home-9/product/pro-011.jpg",
       "Product_Name": "Fresh Apple 100% organic",
@@ -719,7 +726,7 @@
       "Marketstatus": "Upcomming"
     },
     {
-      "id": 20,
+      "id": 19,
       "Image_1": "/image/home-9/product/pro-12.jpg",
       "Image_2": "image/home-9/product/pro-012.jpg",
       "Product_Name": "Fresh Coconut (150gm)",
@@ -738,7 +745,7 @@
       "Marketstatus": "latest"
     },
     {
-      "id": 21,
+      "id": 20,
       "status": "instock",
       "Image_1": "/image/home-14/pro-1.jpg",
       "Image_2": "image/home-14/pro-01.jpg",
@@ -750,7 +757,7 @@
       "Marketstatus": "Trending"
     },
     {
-      "id": 22,
+      "id": 21,
       "status": "instock",
       "Image_1": "/image/home-14/pro-2.jpg",
       "Image_2": "image/home-14/pro-02.jpg",
@@ -762,7 +769,7 @@
       "Marketstatus": "latest"
     },
     {
-      "id": 23,
+      "id": 22,
       "status": "instock",
       "Image_1": "/image/home-14/pro-3.jpg",
       "Image_2": "image/home-14/pro-03.jpg",
@@ -774,7 +781,7 @@
       "Marketstatus": "best"
     },
     {
-      "id": 24,
+      "id": 23,
       "status": "instock",
       "Image_1": "/image/home-14/pro-4.jpg",
       "Image_2": "image/home-14/pro-04.jpg",
@@ -786,7 +793,7 @@
       "Marketstatus": "Upcomming"
     },
     {
-      "id": 25,
+      "id": 24,
       "status": "instock",
       "Image_1": "/image/home-14/pro-8.jpg",
       "Image_2": "image/home-14/pro-08.jpg",
@@ -798,7 +805,7 @@
       "Marketstatus": "Trending"
     },
     {
-      "id": 26,
+      "id": 25,
       "status": "instock",
       "Image_1": "/image/home-16/product-img/pro-1.2.jpg",
       "Image_2": "image/home-16/product-img/pro-1.1.jpg",
@@ -811,7 +818,7 @@
     },
     {
       "status": "instock",
-      "id": 27,
+      "id": 26,
       "Image_1": "/image/home-16/product-img/pro-2.2.jpg",
       "Image_2": "image/home-16/product-img/pro-2.1.jpg",
       "Dis_count": "-6%",
@@ -821,7 +828,7 @@
       "Marketstatus": "Upcomming"
     },
     {
-      "id": 28,
+      "id": 27,
       "status": "instock",
       "Image_1": "/image/home-16/product-img/pro-3.2.jpg",
       "Image_2": "image/home-16/product-img/pro-3.1.jpg",
@@ -833,7 +840,7 @@
       "Marketstatus": "Trending"
     },
     {
-      "id": 29,
+      "id": 28,
       "status": "instock",
       "Image_1": "/image/home-16/product-img/pro-4.2.jpg",
       "Image_2": "image/home-16/product-img/pro-4.1.jpg",
@@ -845,7 +852,7 @@
       "Marketstatus": "best"
     },
     {
-      "id": 30,
+      "id": 29,
       "status": "instock",
       "Image_1": "/image/home-16/product-img/pro-5.2.jpg",
       "Image_2": "image/home-16/product-img/pro-5.1.jpg",
@@ -855,6 +862,16 @@
       "Old_Price": "60.00",
       "catogery": "juice",
       "Marketstatus": "best"
+    },
+    {
+      "Product_Name": "ewr",
+      "Price": "85296374",
+      "Image_1": "ff",
+      "Image_2": "32",
+      "Marketstatus": "Trending",
+      "status": "instock",
+      "catogery": "juice",
+      "id": 30
     }
   ],
   "catogery": [
@@ -875,23 +892,25 @@
       "catogery_name": "Fruits"
     }
   ],
+  "Marketstatus": [
+    {
+      "id": 1025,
+      "Marketstatus": "best"
+    },
+    {
+      "id": 5452,
+      "Marketstatus": "upcoming"
+    },
+    {
+      "id": 4425,
+      "Marketstatus": "Trending"
+    },
+    {
+      "id": 5547,
+      "Marketstatus": "latest"
+    }
+  ],
   "user_cart_system": [
-    {
-      "Image_1": "/image/pro/pro-img-11.jpg",
-      "Product_Name": "Sp.red fresh guava",
-      "userId": 2,
-      "price": 140,
-      "quantity": 6,
-      "id": 1
-    },
-    {
-      "Image_1": "/image/home-16/product-img/pro-2.2.jpg",
-      "Product_Name": "Orange juicy",
-      "userId": 2,
-      "price": "82.00",
-      "quantity": 1,
-      "id": 2
-    },
     {
       "Image_1": "/image/home-9/product/pro-12.jpg",
       "Product_Name": "Fresh Coconut (150gm)",
@@ -907,6 +926,38 @@
       "price": "140.00",
       "quantity": 1,
       "id": 4
+    },
+    {
+      "Image_1": "/image/home-16/product-img/pro-4.2.jpg",
+      "Product_Name": "lamon juicy",
+      "userId": 2,
+      "price": "33.00",
+      "quantity": 1,
+      "id": 5
+    },
+    {
+      "Image_1": "/image/pro/pro-img-2.jpg",
+      "Product_Name": "Fresh Brinjal  ",
+      "userId": 2,
+      "price": "160.00",
+      "quantity": 1,
+      "id": 6
+    },
+    {
+      "Image_1": "/image/pro/pro-img-1.jpg",
+      "Product_Name": "Fresh organic Muskmelon (500gm)",
+      "userId": 4,
+      "price": 130,
+      "quantity": 3,
+      "id": 7
+    },
+    {
+      "Image_1": "/image/home-16/product-img/pro-1.2.jpg",
+      "Product_Name": "Coconet juicy",
+      "userId": 4,
+      "price": "63.00",
+      "quantity": 1,
+      "id": 8
     }
   ]
 }

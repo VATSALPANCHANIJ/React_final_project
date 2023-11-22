@@ -11,6 +11,7 @@ import AdminProductshow from './Admin/productshow';
 import Users_detail from './Admin/Userdetail';
 import UserProductShown from './Admin/Userproductshow';
 import Category from './Admin/CategoryAdd';
+import Productadd from './Admin/Productadd';
 
 
 // user side all actions
@@ -44,6 +45,7 @@ function App() {
           <Route path='/admin/AdminProductshow' element={<AdminProductshow />} ></Route>
           <Route path='/admin/Users_detail' element={<Users_detail />} ></Route>
           <Route path='/admin/Category' element={<Category />} ></Route>
+          <Route path='/admin/Productadd' element={<Productadd />} ></Route>
           <Route path='/admin/Userproductshow/:userId' element={<UserProductShown />} ></Route>
         </Route>
         {/* <Route path='/admin/Login' element={<AdminLogin />} ></Route> */}

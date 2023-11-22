@@ -1,0 +1,27 @@
+.add input,
+ .add select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    box-sizing: border-box;
+}
+button,
+.btn-s {
+    background-color: #f5ab1e;
+    padding: 10px 15px;
+    border-radius: 3px;
+    cursor: pointer;
+    border: 1px solid #f5ab1e;
+    margin: 0 10px;
+    font-size: 18px;
+    text-transform: capitalize;
+}
+button:hover,
+.btn-s:hover {
+    background-color: transparent;
+    color: #f5ab1e !important;
+}
+.input-box {
+    width: 130% !important;
+    margin: 10px 0;
+}

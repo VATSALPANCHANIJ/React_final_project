@@ -6,28 +6,22 @@ import axios from "axios";
 
 const Shop = () => {
     const [allProducts, setAllProducts] = useState([]);
-
+    const [currentPage, setCurrentPage] = useState(1);
     const [category, setCategory] = useState([]);
+    const [product, setProduct] = useState();
     const [loading, setLoading] = useState(true);
     const [highprice, setHighprice] = useState('HighlowTo');
     const [lowprice, setlowprice] = useState('LowToHigh');
     const [searchTerm, setSearchTerm] = useState('');
+    const [currentProduct, setCurrentProduct] = useState([]);
     const [status, setStatus] = useState("");
-    const [showProduct, setShowProduct] = useState("");
-
 
     // all products show
-
     const Fetch_AllProducts = async () => {
         try {
-            const res = await axios.get("http://localhost:3030/AllProduct_show_shop_page");
-            const fetchedData = res.data;
-            setAllProducts(fetchedData);
-            // const currentRecords = allProducts.slice(indexOfFirstRecord,
-            //     indexOfLastRecord);
-            showProduct(allProducts);
-
-            console.log("all products", fetchedData);
+            const res = await axios.get("http://localhost:3030/AllProduct_show_shop_page")
+            setAllProducts(res.data);
+            setCurrentProduct(res.data);
         } catch (error) {
             console.log(error);
         }
@@ -59,8 +53,24 @@ const Shop = () => {
         }
     }
 
+    // pagination code for
+    const recordsPerPage = 12;
+    const lastIndex = currentPage * recordsPerPage;
+    const firstIndex = lastIndex - recordsPerPage;
+    // this is a data showing that time use
+    const currentProducts = allProducts.slice(firstIndex, lastIndex);
 
-
+    const npage = Math.ceil(allProducts.length / recordsPerPage);
+    // pagee = 
+    const numbers = [...Array(npage + 1).keys()].slice(1)
+    function prePage() {
+        if (firstIndex > 0) {
+            setCurrentPage(currentPage - 1);
+        }
+    }
+    function changeCPage(id) {
+        setCurrentPage(id);
+    }
 
     // Price low to high
     const handleSort = (order) => {
@@ -82,27 +92,24 @@ const Shop = () => {
         }
     };
 
-
+    //serach method
     const handleSearch = (event) => {
         setSearchTerm(event.target.value);
     };
-
-    //filter method
+    //serach method
     useEffect(() => {
-        const filteredProducts = allProducts.filter(product => {
-            return product.Product_Name.toLowerCase().includes(searchTerm.toLowerCase())
-        }
+        const filteredProducts = allProducts.filter(product =>
+            product.Product_Name.toLowerCase().includes(searchTerm.toLowerCase())
         );
+        setCurrentProduct(filteredProducts);
+    }, [searchTerm, allProducts]);
 
-        setShowProduct(filteredProducts);
-        console.log("filter ", filteredProducts);
-    }, [searchTerm]);
-
+    
     // status update
     useEffect(() => {
         axios.get(`http://localhost:3030/AllProduct_show_shop_page?Marketstatus=${status}&status=instock`).then((res) => {
-            // console.log(res);    
-            setAllProducts(res.data);
+        // console.log(res);    
+        setAllProducts(res.data);
             console.log(res.data);
         }).catch((err) => {
             console.log(err);
@@ -197,7 +204,7 @@ const Shop = () => {
                                         <div className="grid-pro">
                                             <ul className="grid-product">
                                                 {
-                                                    showProduct.map((val) => {
+                                                    currentProduct.map((val) => {
                                                         return (
                                                             <li className="grid-items">
                                                                 <div className="tred-pro">
@@ -239,31 +246,18 @@ const Shop = () => {
                                             </ul>
                                         </div>
                                     </div>
-                                    {/* <nav>
+                                    <nav className="mt-5">
+                                        <h6 className="tex-center col-12 d-flex justify-content-center mb-3" style={{ color: 'gray' }}>Showing 1 - 12 Product 3 Result More..</h6>
                                         <ul className="pagination justify-content-center">
-                                            <li className="page-item">
-                                                <button className="page-link" disabled={currentPage === 1} onClick={() => setCurrentPage(currentPage - 1)}>
-                                                    Previous
-                                                </button>
-                                            </li>
-                                            {pageNumbers.map((pageNumber) => (
-                                                <li key={pageNumber} className={`page-item ${currentPage === pageNumber ? "active" : ""}`}>
-                                                    <button className="page-link" onClick={() => setCurrentPage(pageNumber)}>
-                                                        {pageNumber}
-                                                    </button>
+
+                                            {numbers.map((n, i) => (
+                                                <li className={`page-link ${currentPage === n ? 'active' : ''}`} key={i}>
+                                                    <a href="#" onClick={() => changeCPage(n)}>{n}</a>
                                                 </li>
                                             ))}
-                                            <li className="page-item">
-                                                <button
-                                                    className="page-link"
-                                                    disabled={currentPage === pageNumbers.length}
-                                                    onClick={() => setCurrentPage(currentPage + 1)}
-                                                >
-                                                    Next
-                                                </button>
-                                            </li>
+
                                         </ul>
-                                    </nav> */}
+                                    </nav>
                                 </div>
                             </div>
 
@@ -271,7 +265,6 @@ const Shop = () => {
                     </section>
                 </>
             )}
-
         </div>
     );
 }

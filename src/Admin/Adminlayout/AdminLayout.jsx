@@ -20,7 +20,9 @@ const AdminLayout = () => {
                                 <li><NavLink to="/admin/AdminProductshow">Product</NavLink></li>
                                 <li><NavLink to="/admin/Users_detail">Users</NavLink></li>
                                 <li><NavLink to="/admin/Category">Categories</NavLink></li>
-                                <li><NavLink to="">Logout</NavLink></li>
+                                <li><NavLink to="/admin/Productadd">Product add</NavLink></li>
+                                <li><NavLink to="/admin/dashborad">Logout</NavLink></li>
+                                <li><NavLink to="/">User_side</NavLink></li>
                             </ul>
                         </div>
                     </div>

@@ -2623,7 +2623,8 @@ a.scroll:hover span{
     padding-bottom: 0px;
 }
 .cart-area .cart-details .cart-item{
-    padding: 13px 0px;
+    margin: 15px 0px;
+    padding: 12px 0px;
     border-top: 1px solid #eee;
     border-bottom: 1px solid #eee;
     display: flex;
@@ -2747,7 +2748,7 @@ a.scroll:hover span{
     justify-content: space-between;
 }
 .cart-total{
-    background-color: #f7f7f7;
+    background-color: #ffffff;
     position: sticky;
     top: 0px;
     padding: 15px;

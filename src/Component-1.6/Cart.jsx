@@ -11,7 +11,7 @@ const Cart = () => {
     const [cartData, setCartData] = useState([]);
     const [quantity, setQuantity] = useState(1);
     const [loading, setLoading] = useState(true);
-    const [subtotal, setSubtotal] = React.useState(0);
+    // const [subtotal, setSubtotal] = React.useState(0);
     //products count
     const totalProductsInCart = cartData.length;
 
@@ -75,7 +75,9 @@ const Cart = () => {
         const newPrice = parseFloat(price);
         const newQuantity = parseInt(quantity);
         const totalPrice = parseFloat(newPrice);
-        calculateSubtotal();
+        // calculateSubtotal();
+
+
         // Calculate the new total price
         if (newQuantity >= 1) {
             // Calculate the new total price
@@ -113,15 +115,15 @@ const Cart = () => {
             });
         }
     }
-    const calculateSubtotal = () => {
-        let newSubtotal = 0;
-        // Iterate over your items and calculate the subtotal
-        // Assuming `items` is an array containing your items
-        items.forEach((val) => {
-            newSubtotal += val.price * val.quantity;
-        });
-        setSubtotal(newSubtotal);
-    };
+    // const calculateSubtotal = () => {
+    //     let newSubtotal = 0;
+    //     // Iterate over your items and calculate the subtotal
+    //     // Assuming `items` is an array containing your items
+    //     items.forEach((val) => {
+    //         newSubtotal += val.price * val.quantity;
+    //     });
+    //     setSubtotal(newSubtotal);
+    // };
 
 
     useEffect(() => {
@@ -215,7 +217,7 @@ const Cart = () => {
                                     <div className="cart-total">
                                         <div className="cart-price">
                                             <span>Subtotal</span>
-                                            <span className="total">${subtotal}</span>
+                                            {/* <span className="total">${subtotal}</span> */}
                                         </div>
                                         <div className="cart-info">
                                             <h4>Shipping info</h4>

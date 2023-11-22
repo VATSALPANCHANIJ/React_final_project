@@ -156,9 +156,12 @@ const Header = () => {
                                                     </div>
                                                 </li>
                                                 <li className="side-wrap wishlist-wrap">
-                                                    <a href="wishlist-empty.html" className="header-wishlist">
-                                                        <span className="wishlist-icon"><i className="icon-heart" /></span>
-                                                    </a>
+                                                    <Link to='/admin/dashborad'>
+
+                                                        <a href="" className="header-wishlist">
+                                                            <span className="wishlist-icon"><i className="icon-heart" /></span>
+                                                        </a>
+                                                    </Link>
                                                 </li>
                                                 <li className="side-wrap cart-wrap">
                                                     <div className="shopping-widget">
