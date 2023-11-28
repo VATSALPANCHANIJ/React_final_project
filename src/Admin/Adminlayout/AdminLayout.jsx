@@ -1,10 +1,31 @@
 import React, { useEffect, useState } from 'react'
 import { NavLink, useNavigate } from 'react-router-dom'
 import { Outlet } from 'react-router-dom'
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 import './styles.css'
 const AdminLayout = () => {
     const navigate = useNavigate();
+    const logout = () => {
+        navigate('/');
+        localStorage.removeItem('checkUserLogin');
+
+        toast.success('successful logout', {
+            position: "top-right",
+            autoClose: 1000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            theme: "colored",
+            style: {
+                width: '400px',
+            },
+        });
+
+    }
     return (
 
         <>
@@ -21,7 +42,7 @@ const AdminLayout = () => {
                                 <li><NavLink to="/admin/Users_detail">Users</NavLink></li>
                                 <li><NavLink to="/admin/Category">Categories</NavLink></li>
                                 <li><NavLink to="/admin/ProductaddAdmin">Product add</NavLink></li>
-                                <li><NavLink to="/admin/dashborad">Logout</NavLink></li>
+                                <li><NavLink onClick={() => logout()}>Logout</NavLink></li>
                                 <li><NavLink to="/">User_side</NavLink></li>
                             </ul>
                         </div>
@@ -29,9 +50,9 @@ const AdminLayout = () => {
                 </div>
                 <div className='col-lg-9'>
                     <div className="line">
-                        
+
                     </div>
-                        <Outlet />
+                    <Outlet />
                 </div>
             </div >
         </>
