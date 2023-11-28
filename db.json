@@ -516,25 +516,24 @@
       "Marketstatus": "Trending"
     },
     {
-      "id": 4,
+      "Product_Name": "Fresh organic fruit (50gm)",
+      "Price": "120.00",
       "Image_1": "/image/pro/pro-img-4.jpg",
       "Image_2": "image/pro/pro-img-04.jpg",
-      "Product_Name": "Fresh organic fruit (50gm)",
-      "Price": "170.00",
-      "catogery": "Vegetables",
+      "Marketstatus": "Upcomming",
       "status": "instock",
-      "Marketstatus": "Upcomming"
+      "catogery": "Vegetables",
+      "id": 4
     },
     {
-      "status": "instock",
-      "id": 5,
+      "Product_Name": "Vegetable tomato fresh",
+      "Price": "55",
       "Image_1": "/image/pro/pro-img-5.jpg",
       "Image_2": "image/pro/pro-img-05.jpg",
-      "Product_Name": "Vegetable tomato fresh",
-      "Price": "140.00",
-      "Old_Price": "155.00",
+      "Marketstatus": "latest",
+      "status": "instock",
       "catogery": "Vegetables",
-      "Marketstatus": "latest"
+      "id": 5
     },
     {
       "status": "instock",
@@ -621,14 +620,13 @@
       "Marketstatus": "best"
     },
     {
-      "status": "instock",
-      "id": 13,
-      "Image_1": "/image/pro/pro-img-12.jpg",
-      "img_2": "image/pro/pro-img-012.jpg",
       "Product_Name": "Fresh mussel (500g)",
       "Price": "259.00",
-      "Old_Price": "360.00",
-      "Marketstatus": "Upcomming"
+      "Image_1": "/image/pro/pro-img-12.jpg",
+      "Image_2": "/image/pro/pro-img-012.jpg",
+      "Marketstatus": "Upcomming",
+      "status": "instock",
+      "id": 13
     },
     {
       "id": 14,
@@ -852,25 +850,23 @@
       "Marketstatus": "best"
     },
     {
-      "id": 29,
-      "status": "instock",
+      "Product_Name": "strawberry juicy",
+      "Price": "10.00",
       "Image_1": "/image/home-16/product-img/pro-5.2.jpg",
       "Image_2": "image/home-16/product-img/pro-5.1.jpg",
-      "Dis_count": "-5%",
-      "Product_Name": "strawberry juicy",
-      "Price": "45.00",
-      "Old_Price": "60.00",
-      "catogery": "juice",
-      "Marketstatus": "best"
-    },
-    {
-      "Product_Name": "ewr",
-      "Price": "85296374",
-      "Image_1": "ff",
-      "Image_2": "32",
-      "Marketstatus": "Trending",
+      "Marketstatus": "best",
       "status": "instock",
       "catogery": "juice",
+      "id": 29
+    },
+    {
+      "Product_Name": "",
+      "Price": "",
+      "Image_1": "",
+      "Image_2": "",
+      "Marketstatus": "",
+      "status": "",
+      "catogery": "",
       "id": 30
     }
   ],
@@ -908,33 +904,13 @@
     {
       "id": 5547,
       "Marketstatus": "latest"
+    },
+    {
+      "Marketstatus": "Vatsal panchani",
+      "id": 5548
     }
   ],
   "user_cart_system": [
-    {
-      "Image_1": "/image/home-9/product/pro-12.jpg",
-      "Product_Name": "Fresh Coconut (150gm)",
-      "userId": 2,
-      "price": "80.00",
-      "quantity": 1,
-      "id": 3
-    },
-    {
-      "Image_1": "/image/pro/pro-img-11.jpg",
-      "Product_Name": "Sp.red fresh guava",
-      "userId": 2,
-      "price": "140.00",
-      "quantity": 1,
-      "id": 4
-    },
-    {
-      "Image_1": "/image/home-16/product-img/pro-4.2.jpg",
-      "Product_Name": "lamon juicy",
-      "userId": 2,
-      "price": "33.00",
-      "quantity": 1,
-      "id": 5
-    },
     {
       "Image_1": "/image/pro/pro-img-2.jpg",
       "Product_Name": "Fresh Brinjal  ",

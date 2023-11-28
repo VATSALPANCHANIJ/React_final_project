@@ -4,7 +4,7 @@ import { useState, useEffect } from 'react';
 import axios from 'axios';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-const Productadd = () => {
+const ProductaddAdmin = () => {
     const { id } = useParams()
     const navigate = useNavigate();
     const [categorytype, setCategorytype] = useState([]);
@@ -21,41 +21,25 @@ const Productadd = () => {
     const [editData, setEditData] = useState("");
 
     const Product_add_to_view_page = () => {
-      
-        if (editData) {
-            axios.put(`http://localhost:3030/AllProduct_show_shop_page/${editData}`, {
-                Product_Name: Product_Name,
-                Price: Price,
-                Image_1: Image_1,
-                Image_2: Image_2,
-                Marketstatus: Marketstatus,
-                status: status,
-                catogery: catogery
-            }).then((response) => {
-                resetFields();
-                toast.success("Product successfully Update");
-                console.log(response);
-            }).catch((error) => {
-                console.log(error);
-                return false;
-            })
-        } else {
-            axios.post(`http://localhost:3030/AllProduct_show_shop_page`, {
-                Product_Name: Product_Name,
-                Price: Price,
-                Image_1: Image_1,
-                Image_2: Image_2,
-                Marketstatus: Marketstatus,
-                status: status,
-                catogery: catogery
-            }).then((response) => {
-                resetFields();
-                toast.success('Product added successfully to view page');
-            }).catch((error) => {
-                console.log(error);
-                return false;
-            })
-        }
+        // if (!Product_Name || !Price || !Image_1 || !Image_2 || !status || !catogery) {
+        //     toast.error('All fields are required');
+        //     return;
+        // }
+        axios.post(`http://localhost:3030/AllProduct_show_shop_page`, {
+            Product_Name: Product_Name,
+            Price: Price,
+            Image_1: Image_1,
+            Image_2: Image_2,
+            Marketstatus: Marketstatus,
+            status: status,
+            catogery: catogery
+        }).then((response) => {
+            resetFields();
+            toast.success('Product added successfully to view page');
+        }).catch((error) => {
+            console.log(error);
+            return false;
+        })
     }
     const resetFields = () => {
         // Reset all input fields
@@ -66,25 +50,6 @@ const Productadd = () => {
         setMarketstatus("");
         setPrice("");
         setStatus("");
-    }
-    const updatedata = () => {
-        // console.log(id);
-        axios.get(`http://localhost:3030/AllProduct_show_shop_page/${id}`)
-            .then((response) => {
-                console.log(id)
-                setCatogery(response.data.catogery);
-                setProduct_Name(response.data.Product_Name);
-                setImage_1(response.data.Image_1);
-                setImage_2(response.data.Image_2);
-                setPrice(response.data.Price);
-                setStatus(response.data.status)
-                setMarketstatus(response.data.Marketstatus);
-                setEditData(id);
-            })
-            .catch((error) => {
-                console.log(error + "error update data admin side");
-                return false;
-            })
     }
     useEffect(() => {
         // category type is a dynamic code
@@ -103,11 +68,11 @@ const Productadd = () => {
                 console.log("Not Found marketstatustype for admin side page no productadd" + error);
                 return false;
             });
-        updatedata(id);
+        
     }, [])
     return (
         <>
-            <h1 className='text-center'>Update Product</h1>
+            <h1 className='text-center'>Add New Product</h1>
             <br /><hr /><br />
             <form style={{ overflow: "hidden" }}>
                 {/* category and products name */}
@@ -153,7 +118,7 @@ const Productadd = () => {
                         </select></div>
                 </div>
                 {/* marketstatus select */}
-                <div className="row justify-content-center add">
+                {/* <div className="row justify-content-center add">
                     <div className="col-5">
                         <label>Market Status:</label>
                         <select name="productStatus" value={Marketstatus}>
@@ -167,19 +132,12 @@ const Productadd = () => {
                             }
                         </select>
                     </div>
-                </div>
+                </div> */}
                 {/* button */}
                 <div className="row justify-content-center ">
                     <div className="col-5 text-center">
-                        {
-                            editData ? (
-                                <button type='button' onClick={() => Product_add_to_view_page()}>update Product</button>
-
-                            ) : (
-                                <button type='button' onClick={() => Product_add_to_view_page()}>Add Product</button>
-
-                            )
-                        }&nbsp; &nbsp; &nbsp;
+                        <button type='button' onClick={() => Product_add_to_view_page()}>Add Product</button>
+                        &nbsp; &nbsp; &nbsp;
                         <Link to={'/admin/AdminProductshow'}>
                             <button type="button">View product</button>
                         </Link>
@@ -204,4 +162,4 @@ const Productadd = () => {
     )
 
 }
-export default Productadd;
+export default ProductaddAdmin;

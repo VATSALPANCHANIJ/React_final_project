@@ -129,13 +129,11 @@ const AdminProductshow = () => {
                                             </td>
                                             <td>
                                                 <NavLink to={`/admin/Productadd/${item.id}`}>
-                                                   
-                                                    <button>
+                                                    <button type="button">
                                                         <i class="bi bi-pencil-square"></i>
                                                     </button>
-
                                                 </NavLink>
-                                                <button onClick={() => productdelete(item.id)}>
+                                                <button type="button" onClick={() => productdelete(item.id)}>
                                                     <i class="bi bi-trash3-fill"></i>
                                                 </button>
                                             </td>

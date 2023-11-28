@@ -23,6 +23,7 @@ import Register from './Component-1.6/Resgister';
 import Cart from './Component-1.6/Cart';
 import Shop from './Component-1.6/Shop';
 import Account from './Component-1.6/useraccount';
+import ProductaddAdmin from './Admin/ProducaddAdmin';
 function App() {
   return (
     <>
@@ -45,7 +46,8 @@ function App() {
           <Route path='/admin/AdminProductshow' element={<AdminProductshow />} ></Route>
           <Route path='/admin/Users_detail' element={<Users_detail />} ></Route>
           <Route path='/admin/Category' element={<Category />} ></Route>
-          <Route path='/admin/Productadd' element={<Productadd />} ></Route>
+          <Route path='/admin/Productadd/:id' element={<Productadd />} ></Route>
+          <Route path='/admin/ProductaddAdmin' element={<ProductaddAdmin />} ></Route>
           <Route path='/admin/Userproductshow/:userId' element={<UserProductShown />} ></Route>
         </Route>
         {/* <Route path='/admin/Login' element={<AdminLogin />} ></Route> */}

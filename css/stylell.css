@@ -58,4 +58,6 @@
     background-color: #f5ab1e !important;
     color: #fff !important;
 }
-
+body{
+    overflow: hidden !important;
+}

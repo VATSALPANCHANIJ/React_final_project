@@ -232,9 +232,14 @@ const Header = () => {
                                                             </a>
                                                         </li>
                                                         <li className="menu-link parent">
-                                                            <a href="" className="link-title">
-                                                                <span className="sp-link-title">Blogs</span>
-                                                            </a>
+                                                            <NavLink to='/Cart'>
+                                                                <a href="" className="link-title">
+                                                                    <span className="sp-link-title">Cart</span>
+                                                                </a>
+                                                            </NavLink>
+                                                            {/* <NavLink to='/Shop' className="link-title">
+                                                                <span className="sp-link-title">Shop</span>
+                                                            </NavLink> */}
                                                         </li>
                                                         <li className="menu-link parent">
                                                             <a href="javascript:void(0)" className="link-title">

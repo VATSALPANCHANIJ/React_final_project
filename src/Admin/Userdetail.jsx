@@ -16,20 +16,20 @@ const Users_detail = () => {
     }, [])
     return (
         <>
-            <div className="row justify-content-betweeb">
-                <div className="col-2"></div>
-                <div className="col-10">
+           
+
+                <div className="col-12" style={{ overflow: "hideen" }}>
                     <div className="card overflow-hidden">
                         <div className="card-body py-0 px-3">
                             <div className="table-responsive">
                                 <table class="table-striped table text-center ">
                                     <thead>
                                         <tr>
-                                            <th>User Id</th>
-                                            <th>User firstname</th>
-                                            <th>User Lastname</th>
-                                            <th>User Email</th>
-                                            <th>View Cart</th>
+                                            <th className="col-2">User Id</th>
+                                            <th className="col-2">User firstname</th>
+                                            <th className="col-2">User Lastname</th>
+                                            <th className="col-2">User Email</th>
+                                            <th className="col-2">View Cart</th>
                                         </tr>
                                     </thead>
                                     {
@@ -54,7 +54,6 @@ const Users_detail = () => {
                         </div>
                     </div>
                 </div>
-            </div>
         </>
     )
 }
